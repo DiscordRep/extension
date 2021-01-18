@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab",
+        "downloads"
+    ],
+    "name": "DiscordRep Evidence Scanner",
+    "version": "0.2",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://discord.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+    "author": [
+        {
+            "name": "Leo"
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "DiscordRep"
+    }
+}
